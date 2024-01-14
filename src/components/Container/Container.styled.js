@@ -8,19 +8,18 @@ export const Container = styled('div')(() => {
 
     h2: {
       color: '#28432d',
-      fontSize: '32px',
+      fontSize: '28px',
       marginTop: '15px',
       marginBottom: '15px',
       fontWeight: '500',
     },
     h3: {
       color: '#28432d',
-      fontSize: '24px',
+      fontSize: '20px',
       marginTop: '45px',
       fontWeight: '400',
     },
     button: {
-      marginTop: '20px',
       marginRight: '20px',
       backgroundColor: '#96a752',
       border: '2px solid #5d6732',
