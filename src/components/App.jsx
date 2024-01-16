@@ -5,8 +5,6 @@ import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
 import { Statistic } from './Statistic/Statistic';
 import { Notification } from './Notification/Notification';
 
-let total = 0;
-
 export const App = () => {
   const [good, setGood] = useState(0);
   const [neutral, setNeutral] = useState(0);
@@ -20,18 +18,16 @@ export const App = () => {
     } else if (option === 'bad') {
       setBad(prevBad => prevBad + 1);
     }
-
-    countTotalFeedback();
   };
 
-  const countTotalFeedback = () => {
-    total++;
-  };
+  const countTotalFeedback = () => good + neutral + bad;
 
   const countPositiveFeedbackPercentage = () => {
     let positiveFeedback = (good / total) * 100;
     return positiveFeedback;
   };
+
+  const total = countTotalFeedback();
 
   return (
     <Container>
